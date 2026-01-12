@@ -51,6 +51,13 @@ if(!user){
     });
 };
 const iscorrectpassword=await bcrypt.compare(password,user.password);
+if(!iscorrectpassword){
+    return res.status(401).json({
+        message:"Password does not match, try again",
+        success:false
+    });
+}
+
     }
     catch(error){
 console.log(error);
