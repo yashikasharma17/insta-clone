@@ -4,4 +4,4 @@ const commentschema=new mongoose.Schema({
     comment:{type:String,required:true},
     post:{type:mongoose.Schema.Types.ObjectId,ref:'Post'}
 });
-export const comment=mongoose.model('comment',commentschema);
+export const Comment=mongoose.model('Comment',commentschema);
